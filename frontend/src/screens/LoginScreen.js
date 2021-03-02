@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { login } from "../actions/userActions";
-import FormContainer from "./FormContainer";
+import FormContainer from "../components/FormContainer";
 
 const LoginScreen = ({ location, history }) => {
   const [email, setEmail] = useState("");
@@ -61,7 +61,7 @@ const LoginScreen = ({ location, history }) => {
         </Button>
       </Form>
 
-      <Row className="py3">
+      <Row className="py-3">
         <Col>
           New Customer?{" "}
           <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
